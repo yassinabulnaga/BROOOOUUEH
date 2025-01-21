@@ -442,4 +442,4 @@ alarm_set:
 no_hour_changed:
 	jb MINUTE_BUTTON, no_minute_changed  ; if the 'BOOT' button is not pressed skip
 	Wait_Milli_Seconds(#50)	; Debounce delay.  This macro is also in 'LCD_4bit.inc'
-	jb MIN
+	jb MINUTE_BUTTON, no_minute_changed
